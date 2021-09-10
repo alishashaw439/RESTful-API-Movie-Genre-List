@@ -22,10 +22,19 @@ app.post('/api/genres',(req,res)=>{
     res.send(genres);
 })
 
+app.put('/api/genres/:id',(req,res)=>{
+    const result = genres.find(g => g.id === parseInt(req.params.id));
+    result.genre = req.body.genre;
+    res.send(genres);
+})
 
 
-
-
+app.delete('/api/genres/:id',(req,res)=>{
+    const result = genres.find(g => g.id === parseInt(req.params.id));
+    const index = genres.indexOf(result);
+    genres.splice(index,1);
+    res.send(genres);
+})
 
 
 
