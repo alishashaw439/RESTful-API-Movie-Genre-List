@@ -10,6 +10,5 @@ const genres = [
     {id:5, genre:'Drama'},
     {id:6, genre:'Sad'},
     {id:7, genre:'Sci-Fi'},
-    {id:8, genre:'Fantasy'},
 ]
 
