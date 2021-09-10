@@ -12,3 +12,26 @@ const genres = [
     {id:7, genre:'Sci-Fi'},
 ]
 
+app.get('/',(req,res)=>{
+    res.send(genres);
+});
+
+app.post('/api/genres',(req,res)=>{
+    const body = req.body;
+    genres.push(body);
+    res.send(genres);
+})
+
+
+
+
+
+
+
+
+
+
+
+const port = process.env.PORT || 3000;
+app.listen(port,()=> console.log('Server started at '+port));
+
